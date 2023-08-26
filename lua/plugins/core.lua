@@ -119,10 +119,11 @@ return {
         vim.opt.foldcolumn = "0"
         vim.opt.signcolumn = "no"
       end,
-      open_mapping = [[<F7>]],
+      open_mapping = [[<M-1>]],
       shading_factor = 2,
-      direction = "float",
+      direction = "vertical",
       float_opts = { border = "rounded" },
+      hide_numbers = true, -- hide the number column in toggleterm buffers
     },
   },
 }

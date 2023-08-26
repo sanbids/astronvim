@@ -111,6 +111,8 @@ return {
           }
         end,
       },
+      hide_root_node = false, -- Hide the root node.
+      retain_hidden_root_indent = false,
       window = {
         width = 30,
         mappings = {
@@ -130,7 +132,7 @@ return {
         },
       },
       filesystem = {
-        follow_current_file = { enabled = true,leave_dirs_open = false },
+        follow_current_file = { enabled = true, leave_dirs_open = false },
         hijack_netrw_behavior = "open_current",
         use_libuv_file_watcher = true,
       },
@@ -138,6 +140,13 @@ return {
         {
           event = "neo_tree_buffer_enter",
           handler = function(_) vim.opt_local.signcolumn = "auto" end,
+        },
+        {
+          event = "file_opened",
+          handler = function(file_path)
+            --auto close
+            require("neo-tree").close_all()
+          end,
         },
       },
     }

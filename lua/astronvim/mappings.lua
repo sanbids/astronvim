@@ -19,10 +19,18 @@ local sections = {
   t = { desc = get_icon("Terminal", 1, true) .. "Terminal" },
 }
 
--- Normal --
--- Standard Operations
--- maps.n["H"] = { ":bprevious<cr>", desc = "previous buffer" }
--- maps.n["L"] = { ":bnext<cr>", desc = "next buffer" }
+vim.cmd "noremap <up> <nop>"
+vim.cmd "noremap <Down> <Nop>"
+vim.cmd "noremap <Left> <Nop>"
+vim.cmd "noremap <Right> <Nop>"
+vim.cmd "inoremap <Up> <Nop>"
+vim.cmd "inoremap <Down> <Nop>"
+vim.cmd "inoremap <Left> <Nop>"
+vim.cmd "inoremap <Right> <Nop>"
+vim.cmd "vnoremap im aBoV"
+vim.cmd "vnoremap am aBjoV"
+vim.keymap.set("v", "p", '"_dP')
+
 maps.n["j"] = { "v:count == 0 ? 'gj' : 'j'", expr = true, desc = "Move cursor down" }
 maps.n["k"] = { "v:count == 0 ? 'gk' : 'k'", expr = true, desc = "Move cursor up" }
 maps.n["<leader>w"] = { "<cmd>w<cr>", desc = "Save" }
@@ -154,7 +162,7 @@ end
 -- NeoTree
 if is_available "neo-tree.nvim" then
   maps.n["<leader>e"] = {
-    function() require("neo-tree.command").execute({ toggle = true, dir = require("astronvim.utils").get_root()  }) end,
+    function() require("neo-tree.command").execute { toggle = true, dir = require("astronvim.utils").get_root() } end,
     desc = "Toggle Explorer",
   }
 end
@@ -327,7 +335,8 @@ if is_available "toggleterm.nvim" then
   if python then maps.n["<leader>tp"] = { function() utils.toggle_term_cmd(python) end, desc = "ToggleTerm python" } end
   maps.n["<leader>tf"] = { "<cmd>ToggleTerm direction=float<cr>", desc = "ToggleTerm float" }
   maps.n["<leader>th"] = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" }
-  maps.n["<leader>tv"] = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", desc = "ToggleTerm vertical split" }
+  maps.n["<leader>tv"] = { "<cmd>ToggleTerm size=50 direction=vertical<cr>", desc = "ToggleTerm vertical split" }
+  maps.n["<M-1>"] = { "<cmd>ToggleTerm size=12 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" }
   maps.n["<F7>"] = { "<cmd>ToggleTerm<cr>", desc = "Toggle terminal" }
   maps.t["<F7>"] = maps.n["<F7>"]
   maps.n["<C-'>"] = maps.n["<F7>"] -- requires terminal that supports binding <C-'>
