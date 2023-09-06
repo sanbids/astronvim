@@ -17,6 +17,7 @@ local sections = {
   g = { desc = get_icon("Git", 1, true) .. "Git" },
   S = { desc = get_icon("Session", 1, true) .. "Session" },
   t = { desc = get_icon("Terminal", 1, true) .. "Terminal" },
+  x = { desc = get_icon("GitRenamed", 1, true) .. "+diagnostics/quickfix" },
 }
 
 vim.cmd "noremap <up> <nop>"
