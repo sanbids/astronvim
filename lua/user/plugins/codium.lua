@@ -1,4 +1,5 @@
 return {
+  enabled = false,
   "Exafunction/codeium.vim",
   event = "User AstroFile",
   config = function()

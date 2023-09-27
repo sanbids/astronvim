@@ -47,6 +47,5 @@ return {
     },
   },
 
-  polish = function()
-  end,
+  polish = function() end,
 }

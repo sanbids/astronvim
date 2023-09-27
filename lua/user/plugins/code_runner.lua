@@ -9,7 +9,10 @@ return {
           "java $fileNameWithoutExt",
         },
         python = "python3 -u",
-        typescript = "deno run",
+        typescript = "bun",
+        javascript = "bun",
+        reactjavascript = "bun",
+        typescriptreact = "bun",
         rust = {
           "cd $dir &&",
           "rustc $fileName &&",

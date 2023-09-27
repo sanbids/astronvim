@@ -111,8 +111,6 @@ return {
           }
         end,
       },
-      hide_root_node = false, -- Hide the root node.
-      retain_hidden_root_indent = false,
       window = {
         width = 30,
         mappings = {
@@ -124,7 +122,7 @@ return {
           Y = "copy_selector",
           h = "parent_or_close",
           l = "child_or_open",
-          o = "open",
+          o = "open_with_window_picker",
         },
         fuzzy_finder_mappings = { -- define keymaps for filter popup window in fuzzy_finder_mode
           ["<C-j>"] = "move_cursor_down",
@@ -132,7 +130,7 @@ return {
         },
       },
       filesystem = {
-        follow_current_file = { enabled = true, leave_dirs_open = false },
+        follow_current_file = { enabled = true },
         hijack_netrw_behavior = "open_current",
         use_libuv_file_watcher = true,
       },
@@ -140,13 +138,6 @@ return {
         {
           event = "neo_tree_buffer_enter",
           handler = function(_) vim.opt_local.signcolumn = "auto" end,
-        },
-        {
-          event = "file_opened",
-          handler = function(file_path)
-            --auto close
-            require("neo-tree").close_all()
-          end,
         },
       },
     }

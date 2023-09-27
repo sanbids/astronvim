@@ -1,5 +1,14 @@
 return {
-  { "lukas-reineke/indent-blankline.nvim", opts = { char = "┊" }, enabled = false },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    opts = {
+      char = "",
+      context_char = "│",
+      show_current_context = true,
+      show_current_context_start = false,
+    },
+    enabled = true,
+  },
   { "nvim-lua/lsp-status.nvim", enabled = false },
   { "kevinhwang91/nvim-ufo", enabled = false },
   { "aerial.nvim", enabled = false },
