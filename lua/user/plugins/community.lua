@@ -15,4 +15,5 @@ return {
   { import = "astrocommunity.colorscheme.kanagawa-nvim" },
   { import = "astrocommunity.editing-support.true-zen-nvim" },
   -- { import = "astrocommunity.completion.codeium-vim" },
+  
 }
