@@ -3,8 +3,6 @@ return {
   "UTFeight/neoproj",
 
   dependencies = {
-    -- Just loading it after initialization
-    -- not a plugin dependency (just a config dependency)
     "nvim-telescope/telescope-file-browser.nvim",
   },
 
@@ -14,12 +12,6 @@ return {
   },
 
   keys = {
-    -- { -- Using <leader>fp is suggested
-    --   "<leader>pf",
-    --   "<cmd> ProjectOpen<CR>",
-    --   mode = "n",
-    --   desc = "Project",
-    -- },
     {
       "<leader>nn",
       "<cmd> ProjectNew<CR>",

@@ -4,54 +4,58 @@ M.opts = function()
   return {
     setup = {
       -- Directory which contains all of your projects
-      project_path = "~/Github/repos", -- TODO: Ask for user input + migrate to init.lua
+      project_path = "~/Desktop/project/repos", -- TODO: Ask for user input + migrate to init.lua
     },
 
     templates = {
+      -- {
+      --   name = "󰜈 Nextjs (latest)",
+      --   expand = "bun create next-app@latest . --use-bun --ts --tailwind --eslint --src-dir --import-alias '@/*'",
+      -- },
       {
-        name = "Kotlin (Android)",
+        name = " Kotlin (Android)",
         repo = "nekocode/create-android-kotlin-app",
         opts = {
           pull = true,
         },
       },
       {
-        name = "Java",
+        name = " Java",
         repo = "pascalpoizat/template-java-project",
         opts = {
           pull = true,
         },
       },
       {
-        name = "Swift",
+        name = " Swift",
         repo = "vapor/template",
         opts = {
           pull = true,
         },
       },
       {
-        name = "TypeScript (React + Next.js)",
+        name = "󰛦 TypeScript (React + Next.js)",
         repo = "cruip/open-react-template",
         opts = {
           pull = true,
         },
       },
       {
-        name = "C# (.NET)",
+        name = " C# (.NET)",
         repo = "Dotnet-Boxed/Templates",
         opts = {
           pull = true,
         },
       },
       {
-        name = "Go (Kratos)",
+        name = " Go (Kratos)",
         repo = "go-kratos/kratos-layout",
         opts = {
           pull = true,
         },
       },
       {
-        name = "Go (Makefile)",
+        name = " Go (Makefile)",
         repo = "thockin/go-build-template",
         opts = {
           pull = true,
@@ -65,14 +69,14 @@ M.opts = function()
         },
       },
       {
-        name = "Markdown",
+        name = " Markdown",
         repo = "othneildrew/Best-README-Template",
         opts = {
           pull = true,
         },
       },
       {
-        name = "Python",
+        name = " Python",
         repo = "rochacbruno/python-project-template",
         opts = {
           pull = true,
@@ -80,7 +84,7 @@ M.opts = function()
       },
 
       {
-        name = "Python (Tensorflow)",
+        name = " Python (Tensorflow)",
         repo = "MrGemy95/Tensorflow-Project-Template",
         opts = {
           pull = true,
@@ -88,12 +92,12 @@ M.opts = function()
       },
 
       {
-        name = "Rust",
+        name = "󱘗 Rust",
         expand = "cargo init",
       },
 
       {
-        name = "C++",
+        name = " C++",
         repo = "UTFeight/Cpp-Cmake-Template",
         opts = {
           pull = true,
